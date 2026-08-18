@@ -1,0 +1,33 @@
+================================================================================
+HONDA CB100 - SHOP MANUAL SPECIFICATIONS & TROUBLESHOOTING
+================================================================================
+
+1. ENGINE SPECIFICATIONS
+- Type: 4-stroke, OHC single cylinder
+- Bore & Stroke: 50.5 x 49.5 mm
+- Displacement: 99cc
+- Compression Ratio: 9.5 : 1
+- Carburetor: Keihin PW20 (Standard Pilot Jet: #35, Main Jet: #100)
+- Valve Clearance (Cold): Intake: 0.05 mm, Exhaust: 0.05 mm
+- Spark Plug: NGK D8EA (Gap: 0.6 - 0.7 mm)
+- Engine Oil Capacity: 0.9 Liters (SAE 10W-30 or 20W-50 for hot climates)
+
+2. IGNITION & ELECTRICAL SYSTEM
+- System Type: Breaker Points (Platina) / AC Magneto
+- Contact Breaker Point Gap: 0.3 - 0.4 mm
+- Timing Advance: F mark opens at 10 degrees BTDC, T mark represents Top Dead Center (TDC).
+- Voltage: 6 Volts AC system (Standard).
+- Battery: 6V 4Ah (Type: 6N4-2A)
+- Ignition coil resistance: Primary 1.5 - 2.0 Ohm, Secondary 8k - 10k Ohm.
+
+3. CARBURETOR ADJUSTMENT (Keihin PW20)
+- Idle Speed: 1,300 RPM +/- 100 RPM
+- Air Screw Adjustment: 1.5 turns out from fully closed.
+- Float Level: 21.0 mm (Distance from gasket surface to bottom of float).
+
+4. TROUBLESHOOTING SPARKS
+If the motorcycle has no spark (pengapian hilang):
+- Verify the breaker points (platina) are clean and not pitted. Use sandpaper (amplas) to clean contacts.
+- Check the point gap setting (must be 0.35 mm).
+- Check the condenser. A failed condenser will cause excessive sparking at the breaker points and no spark at the spark plug.
+- Verify wiring from the magneto (spul) is not shorted to the frame.
