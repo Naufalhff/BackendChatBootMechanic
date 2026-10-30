@@ -21,6 +21,9 @@ ENV/
 *.sqlite3
 pocket_mechanic.db
 
+# Uploaded media
+media/
+
 # Unit test / coverage
 .pytest_cache/
 .coverage
