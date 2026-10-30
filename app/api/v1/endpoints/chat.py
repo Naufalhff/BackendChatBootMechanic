@@ -6,7 +6,7 @@ from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile, s
 from sqlalchemy.orm import Session
 
 from app.api.v1.endpoints.auth import get_current_user
-from app.core.gemini import generate_response_with_rag
+from app.core.llm import generate_response_with_rag
 from app.core.normalizer import normalize_query
 from app.database.models import ChatHistory, User
 from app.database.session import get_db
@@ -20,13 +20,15 @@ async def send_message(
     message: str = Form(...),
     motor_model: Optional[str] = Form("Honda CB100"),
     image: Optional[UploadFile] = File(None),
+    model: Optional[str] = Form(None),
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
     """
     Mengirimkan pesan konsultasi mekanik.
     Mendukung pengiriman teks dan lampiran foto motor rusak (multimodal).
-    Menggunakan normalisasi slang otomotif Indonesia sebelum diproses Gemini RAG.
+    Menggunakan normalisasi slang otomotif Indonesia sebelum diproses LLM RAG (9Router).
+    Parameter `model` opsional untuk memilih model 9Router; jika kosong memakai NINEROUTER_MODEL.
     """
     image_url = None
     image_bytes = None
@@ -75,6 +77,7 @@ async def send_message(
         past_messages=past_messages,
         image_bytes=image_bytes,
         image_mime=image.content_type if image else "image/jpeg",
+        model=model,
     )
 
     db_chat = ChatHistory(

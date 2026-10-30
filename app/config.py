@@ -10,8 +10,12 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "Pocket Mechanic API"
     API_V1_STR: str = "/api/v1"
 
-    GEMINI_API_KEY: str = Field(..., env="GEMINI_API_KEY")
-    GEMINI_MODEL: str = Field("gemini-flash-latest", env="GEMINI_MODEL")
+    NINEROUTER_API_KEY: str = Field("", env="NINEROUTER_API_KEY")
+    NINEROUTER_BASE_URL: str = Field(
+        "https://9router.hariinidev.tech/v1", env="NINEROUTER_BASE_URL"
+    )
+    NINEROUTER_MODEL: str = Field("gemini/gemini-3.6-flash", env="NINEROUTER_MODEL")
+    NINEROUTER_TIMEOUT: float = Field(150.0, env="NINEROUTER_TIMEOUT")
 
     DATABASE_URL: str = Field(..., env="DATABASE_URL")
 
